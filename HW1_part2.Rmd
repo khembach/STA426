@@ -1,0 +1,20 @@
+---
+title: "Homework 1 Part 2"
+author: "Katharina Hembach"
+date: "19 Sep 2016"
+output: html_document
+---
+##Sample from log-normal distribution
+We want to sample 100 values from a log-normal distribution with mean 1 and standard deviation 0.25. For this, we use the function rlnorm(n, meanlog = 0, sdlog = 1) and change the mean to 1 and the standard deviation to 0.25.
+```{r sample}
+x <- rlnorm(100, meanlog=1, sdlog=0.25)
+```
+
+##Histogram of the sampled values
+Now we want to plot the sampled values.
+```{r histo}
+hist(x, 25)
+```
+
+##Summary statistics
+The mean of our sample is `r mean(x)` and the variance is `r var(x)`.
